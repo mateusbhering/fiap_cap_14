@@ -2,15 +2,15 @@
 
 Um aplicativo web moderno para gerenciamento de contas bancárias e transações financeiras, desenvolvido com **React** no frontend e **Spring Boot** no backend.
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
-- ✅ **Autenticação de Usuários** - Login e gerenciamento de sessões
-- ✅ **Gerenciamento de Contas** - Criar e consultar contas bancárias
-- ✅ **Transações Financeiras** - Registrar depósitos, saques e transferências
-- ✅ **Extrato de Conta** - Visualizar histórico de transações
-- ✅ **Interface Responsiva** - Design moderno e amigável
+-  **Autenticação de Usuários** - Login e gerenciamento de sessões
+-  **Gerenciamento de Contas** - Criar e consultar contas bancárias
+-  **Transações Financeiras** - Registrar depósitos, saques e transferências
+-  **Extrato de Conta** - Visualizar histórico de transações
+-  **Interface Responsiva** - Design moderno e amigável
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 ### Frontend
 - **React 19** - Biblioteca UI
@@ -33,7 +33,7 @@ Um aplicativo web moderno para gerenciamento de contas bancárias e transações
 - **Java 21** (para o backend)
 - **Maven** (incluído no projeto)
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### 1️⃣ Clone o repositório
 ```bash
