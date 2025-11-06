@@ -1,0 +1,150 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    🎉 FINTECH APP - GUIA RÁPIDO                                ║
+║                                                                                ║
+║  ✅ Backend:  http://localhost:8080                                           ║
+║  ✅ Frontend: http://localhost:5174                                           ║
+║  ✅ Banco:    H2 em memória (pode mudar para MySQL)                           ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 CREDENCIAIS DE LOGIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Opção 1:
+    Email: joao@example.com
+    Senha: qualquer valor
+
+  Opção 2:
+    Email: maria@example.com
+    Senha: qualquer valor
+
+  Opção 3:
+    Email: pedro@example.com
+    Senha: qualquer valor
+
+
+🚀 COMO INICIAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Terminal 1 - Backend (Java/Spring):
+  $ cd /Users/mateus/Desktop/cap14/fintech_back_end
+  $ ./mvnw spring-boot:run
+
+  Terminal 2 - Frontend (React):
+  $ cd /Users/mateus/Desktop/cap14/frontend
+  $ npm run dev
+
+
+📱 ACESSAR A APP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. Abra no navegador: http://localhost:5174
+  2. Clique em "Login"
+  3. Digite email e senha de qualquer um dos usuários acima
+  4. Clique em "Sign in"
+
+
+🗄️ BANCO DE DADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  H2 Console:
+    URL: http://localhost:8080/h2-console
+    JDBC: jdbc:h2:mem:testdb
+    User: sa
+    Pass: (vazio)
+
+  Mudar para MySQL (opcional):
+    1. Instalar: brew install mysql
+    2. Criar BD: mysql -u root -p
+    3. CREATE DATABASE fintechdb;
+    4. Editar: application.properties
+    5. Reiniciar backend
+
+
+📖 DOCUMENTAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  CONEXAO_FRONTEND_BACKEND.md   - Guia técnico completo
+  BANCO_DADOS_GUIA.md           - Como conectar ao MySQL
+  CREDENCIAIS_LOGIN.md          - Usuários e senhas
+  README_SETUP.md               - Configuração inicial
+  gerenciar-bd.sh               - Script para gerenciar BD
+
+
+🔧 COMANDOS ÚTEIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Matar backend:
+    $ pkill -f "spring-boot:run"
+
+  Matar frontend:
+    $ lsof -i :5173 | grep -v COMMAND | awk '{print $2}' | xargs kill -9
+
+  Ver logs do MySQL:
+    $ mysql -u root -p fintechdb
+    > SELECT * FROM clientes;
+
+  Usar script gerenciador:
+    $ /Users/mateus/Desktop/cap14/gerenciar-bd.sh
+
+
+❌ PROBLEMAS COMUNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ❌ "Email não encontrado"
+     → Verifique credenciais acima
+
+  ❌ "Connection refused"
+     → Backend não está rodando. Execute no Terminal 1
+
+  ❌ "Cannot GET /login"
+     → Frontend não está rodando. Execute no Terminal 2
+
+  ❌ "Port 5173 is in use"
+     → Front roda em 5174. Acesse http://localhost:5174
+
+  ❌ "Port 8080 is in use"
+     → Rode: pkill -f "spring-boot:run"
+
+
+📊 ARQUITETURA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Frontend:
+    ├── React 19
+    ├── TypeScript
+    ├── React Router
+    └── Axios
+
+  Backend:
+    ├── Spring Boot 3.5.7
+    ├── Spring Data JPA
+    ├── MySQL / H2
+    └── CORS configurado
+
+  Endpoints:
+    POST   /auth/login                - Fazer login
+    GET    /clientes                  - Listar usuários
+    POST   /clientes                  - Criar usuário
+    GET    /contas                    - Listar contas
+    POST   /contas                    - Criar conta
+    GET    /transacoes                - Listar transações
+    POST   /transacoes                - Criar transação
+
+
+✅ PRÓXIMOS PASSOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  □ Fazer login com as credenciais
+  □ Listar usuários na página
+  □ Criar novos usuários
+  □ Criar contas bancárias
+  □ Registrar transações
+  □ Melhorar UI/UX
+  □ Implementar autenticação com JWT
+  □ Deploy em produção
+
+
+════════════════════════════════════════════════════════════════════════════════════
+                    Última atualização: 5 de novembro de 2025
+════════════════════════════════════════════════════════════════════════════════════
