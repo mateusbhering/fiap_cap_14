@@ -1,6 +1,6 @@
-# 🎉 Backend e Frontend Conectados com Sucesso!
+#  Backend e Frontend Conectados com Sucesso!
 
-## ✅ Status Atual
+##  Status Atual
 
 - **Backend Spring Boot**: Rodando em `http://localhost:8080`
 - **Frontend React**: Rodando em `http://localhost:5174`
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Como Acessar
+##  Como Acessar
 
 ### Frontend
 Abra em seu navegador: **http://localhost:5174**
@@ -120,7 +120,7 @@ spring.datasource.password=sua_senha
 
 ---
 
-## 📞 Suporte
+##  Suporte
 
 Para mais informações sobre a configuração, veja o arquivo:
 `CONEXAO_FRONTEND_BACKEND.md`
